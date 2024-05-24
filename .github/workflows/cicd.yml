@@ -22,3 +22,14 @@ jobs:
         run: docker build -t itzmedinesh/music-service .
       - name: Push image to docker hub
         run: docker push itzmedinesh/music-service:latest
+
+  deploy:
+    needs: build
+    runs-on: [music-run]
+    steps:
+      - name: Pull image from docker hub
+        run: docker pull itzmedinesh/music-service:latest
+      - name: Delete container if exists
+        run: docker rm -f music-service-container
+      - name: Run as container
+        run: docker run -d -p 8080:8080 --name music-service-container itzmedinesh/music-service
