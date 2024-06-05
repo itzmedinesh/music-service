@@ -8,11 +8,11 @@
 		<version>3.3.0</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.diligent</groupId>
+	<groupId>com.microcrafts</groupId>
 	<artifactId>music-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Music Service</name>
-	<description>Music Service </description>
+	<description>Music Service</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
